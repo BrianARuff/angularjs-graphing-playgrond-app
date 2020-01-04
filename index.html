@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"
+        href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Graph It</title>
+</head>
+
+<body ng-app="graphIt" ng-controller="mainCtrl">
+    <nav style="border: 1px solid black; padding: 20px; margin: 20px;">
+        <h1>Nav Bar</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#!/about">About</a></li>
+            <li><a href="/#!/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Views -->
+    <div ng-view></div>
+
+    <!-- Page Info -->
+    <br>
+    <pre>$location.path() = {{$location.path()}}</pre>
+    <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+    <pre>$route.current.params = {{$route.current.params}}</pre>
+    <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+    <pre>$routeParams = {{$routeParams}}</pre>
+
+    <!-- Dependencies -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+
+
+    <!--  controllers -->
+    <script src="./controllers/app.js"></script>
+</body>
+
+</html>
